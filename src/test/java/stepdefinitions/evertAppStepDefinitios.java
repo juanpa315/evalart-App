@@ -50,8 +50,8 @@ public class evertAppStepDefinitios {
         }
     }
 
-    @Then("{actor} can  see the passcode successfu")
-    public void i_can_see_the_passcode_successfu(Actor actor) {
+    @Then("{actor} can  see the passcode successfully")
+    public void i_can_see_the_passcode_successfully(Actor actor) {
         actor.attemptsTo(
                 Ensure.that(PASS_CODE).isDisplayed().orElseThrow(new AssertionError("passCode is not visible")));
         String passCode = actor.asksFor(codeValue());
